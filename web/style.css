@@ -1,0 +1,307 @@
+﻿/* ProtegeWX â€” ediÃ§Ã£o da comunidade
+   Paleta em tons de teal profundo, pensada para leitura confortÃ¡vel em telas
+   escuras e para dar contraste claro entre "aplicado", "nÃ£o aplicado" e risco. */
+
+:root {
+  --deep:    #012c33;
+  --surface: #003040;
+  --raised:  #013a48;
+  --mid:     #004050;
+  --line:    #005060;
+  --accent:  #70b0c0;
+  --accent-f:#8fc9d8;
+  --text:    #f0f0f0;
+  --muted:   #9db6bf;
+  --danger:  #dc3545;
+  --ok:      #4dc247;
+  --warn:    #e0a83a;
+  --radius:  10px;
+  --sombra:  0 2px 10px rgba(0,0,0,.35);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding-bottom: 92px;
+  background: var(--deep);
+  color: var(--text);
+  font: 15px/1.6 "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+code {
+  font-family: "Cascadia Mono", Consolas, monospace;
+  background: rgba(0,0,0,.3);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: .88em;
+}
+
+/* ---------------------------------------------------------------- topo */
+
+.topo {
+  background: linear-gradient(180deg, var(--surface), var(--deep));
+  border-bottom: 1px solid var(--line);
+}
+.topo-int {
+  max-width: 1080px; margin: 0 auto; padding: 20px 24px;
+  display: flex; align-items: center; gap: 22px; flex-wrap: wrap;
+}
+.marca { height: 44px; width: auto; }
+.topo-txt { flex: 1; min-width: 220px; }
+.topo-txt h1 { margin: 0; font-size: 1.45rem; letter-spacing: .3px; }
+.topo-txt p  { margin: 2px 0 0; color: var(--muted); font-size: .92rem; }
+
+/* ---------------------------------------------------------------- layout */
+
+.pagina { max-width: 1080px; margin: 0 auto; padding: 26px 24px 40px; }
+
+.aviso {
+  background: var(--mid);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 15px 18px;
+  margin-bottom: 26px;
+  font-size: .94rem;
+}
+.aviso strong { color: var(--accent-f); }
+
+.painel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin-bottom: 22px;
+  box-shadow: var(--sombra);
+}
+.painel h2 {
+  margin: 0 0 14px;
+  font-size: 1.06rem;
+  color: var(--accent-f);
+  font-weight: 600;
+}
+.sutil { color: var(--muted); font-size: .9rem; }
+.carregando { color: var(--muted); font-style: italic; }
+
+/* ---------------------------------------------------------------- diagnÃ³stico */
+
+.grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 12px; }
+.item {
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.item .rot { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; }
+.item .val { font-size: 1rem; margin-top: 3px; font-weight: 600; }
+.val.bom  { color: var(--ok); }
+.val.ruim { color: var(--danger); }
+.val.aten { color: var(--warn); }
+
+table.lic { width: 100%; border-collapse: collapse; font-size: .9rem; }
+table.lic th, table.lic td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+table.lic th { color: var(--muted); font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .4px; }
+table.lic tr:last-child td { border-bottom: 0; }
+
+/* ---------------------------------------------------------------- grupos e aÃ§Ãµes */
+
+.grupo-cab { margin: 30px 0 14px; }
+.grupo-cab h2 { margin: 0 0 4px; font-size: 1.18rem; }
+.grupo-cab .selo {
+  display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .6px;
+  background: var(--accent); color: var(--deep);
+  border-radius: 4px; padding: 2px 7px; margin-right: 9px; vertical-align: 2px;
+}
+.grupo-cab p { margin: 0; color: var(--muted); font-size: .93rem; }
+.ressalva {
+  margin-top: 9px; padding: 10px 13px;
+  background: rgba(224,168,58,.09);
+  border: 1px solid rgba(224,168,58,.35);
+  border-left: 3px solid var(--warn);
+  border-radius: 7px;
+  font-size: .88rem; color: #f2dcae;
+}
+
+.acao {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 14px;
+  box-shadow: var(--sombra);
+}
+.acao.aplicada { border-color: rgba(77,194,71,.45); }
+.acao input[type=checkbox] { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--accent); cursor: pointer; }
+
+.acao-cab { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.acao-cab h3 { margin: 0; font-size: 1rem; font-weight: 600; }
+.acao-id { color: var(--muted); font-size: .82rem; font-weight: 700; }
+
+.etq { font-size: .7rem; font-weight: 700; letter-spacing: .5px; border-radius: 4px; padding: 2px 7px; text-transform: uppercase; }
+.etq.aplicado     { background: rgba(77,194,71,.18);  color: var(--ok);     border: 1px solid rgba(77,194,71,.45); }
+.etq.nao-aplicado { background: rgba(157,182,191,.13); color: var(--muted); border: 1px solid var(--line); }
+.etq.parcial      { background: rgba(224,168,58,.16); color: var(--warn);   border: 1px solid rgba(224,168,58,.45); }
+.etq.indisponivel { background: rgba(157,182,191,.08); color: var(--muted); border: 1px dashed var(--line); }
+.etq.risco-baixo  { background: rgba(77,194,71,.12);  color: var(--ok);     border: 1px solid rgba(77,194,71,.3); }
+.etq.risco-medio  { background: rgba(224,168,58,.14); color: var(--warn);   border: 1px solid rgba(224,168,58,.4); }
+.etq.risco-alto   { background: rgba(220,53,69,.16);  color: var(--danger); border: 1px solid rgba(220,53,69,.45); }
+
+.acao p { margin: 8px 0 0; font-size: .92rem; }
+.acao .porque  { color: var(--muted); }
+.acao .reverte { color: var(--muted); font-size: .87rem; }
+.acao .porque b, .acao .reverte b { color: var(--accent); font-weight: 600; }
+
+details.cmds { margin-top: 11px; }
+details.cmds summary {
+  cursor: pointer; color: var(--accent); font-size: .87rem;
+  user-select: none; width: fit-content;
+}
+details.cmds summary:hover { color: var(--accent-f); }
+details.cmds pre {
+  margin: 9px 0 0;
+  background: #001c24;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 12px 14px;
+  overflow-x: auto;
+  font: 12.5px/1.7 "Cascadia Mono", Consolas, monospace;
+  color: #cfe6ee;
+  white-space: pre;
+}
+
+.msg { margin-top: 10px; padding: 9px 12px; border-radius: 7px; font-size: .88rem; }
+.msg.erro { background: rgba(220,53,69,.12); border: 1px solid rgba(220,53,69,.45); color: #ffbcc2; }
+.msg.ok   { background: rgba(77,194,71,.12); border: 1px solid rgba(77,194,71,.4);  color: #bff0bc; }
+
+/* ---------------------------------------------------------------- botÃµes */
+
+.btn {
+  font: inherit; font-size: .9rem; font-weight: 600;
+  border-radius: 7px; padding: 9px 17px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--mid); color: var(--text);
+  transition: background .15s, border-color .15s, opacity .15s;
+}
+.btn:hover:not(:disabled) { background: var(--line); }
+.btn:disabled { opacity: .42; cursor: not-allowed; }
+.btn-primario { background: var(--accent); color: var(--deep); border-color: var(--accent); }
+.btn-primario:hover:not(:disabled) { background: var(--accent-f); border-color: var(--accent-f); }
+.btn-fantasma { background: transparent; }
+.btn-perigo-fantasma { background: transparent; border-color: rgba(220,53,69,.5); color: #ff9aa3; }
+.btn-perigo-fantasma:hover:not(:disabled) { background: rgba(220,53,69,.14); }
+
+/* ---------------------------------------------------------------- barra fixa */
+
+.barra {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  background: rgba(1,32,38,.97);
+  border-top: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+  z-index: 40;
+}
+.barra-int {
+  max-width: 1080px; margin: 0 auto; padding: 13px 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.barra-btns { display: flex; gap: 9px; flex-wrap: wrap; }
+
+/* ---------------------------------------------------------------- modal */
+
+.modal {
+  position: fixed; inset: 0; z-index: 60;
+  background: rgba(0,10,14,.72);
+  display: flex; align-items: center; justify-content: center; padding: 24px;
+}
+.modal.oculto { display: none; }
+.modal-caixa {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 24px 26px; max-width: 720px; width: 100%;
+  max-height: 82vh; overflow-y: auto; box-shadow: 0 12px 40px rgba(0,0,0,.55);
+}
+.modal-caixa h3 { margin: 0 0 14px; color: var(--accent-f); font-size: 1.1rem; }
+.modal-btns { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+.modal-caixa pre {
+  background: #001c24; border: 1px solid var(--line); border-radius: 7px;
+  padding: 12px 14px; overflow-x: auto;
+  font: 12.5px/1.7 "Cascadia Mono", Consolas, monospace; color: #cfe6ee;
+}
+.modal-caixa ul { margin: 6px 0 0; padding-left: 20px; }
+.modal-caixa li { margin-bottom: 5px; }
+
+input[type=password], input[type=text] {
+  font: inherit; background: var(--raised); color: var(--text);
+  border: 1px solid var(--line); border-radius: 7px; padding: 9px 12px; width: 100%;
+}
+input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+/* ---------------------------------------------------------------- alertas do check */
+
+.alerta { border-radius: 7px; padding: 11px 14px; margin-top: 10px; font-size: .9rem; }
+.alerta.critico { background: rgba(220,53,69,.12); border: 1px solid rgba(220,53,69,.45); }
+.alerta.atencao { background: rgba(224,168,58,.11); border: 1px solid rgba(224,168,58,.42); }
+.alerta.info    { background: rgba(112,176,192,.1); border: 1px solid rgba(112,176,192,.4); }
+.alerta b { display: block; margin-bottom: 3px; }
+
+.rodape {
+  max-width: 1080px; margin: 0 auto; padding: 0 24px 30px;
+  color: var(--muted); font-size: .84rem; text-align: center;
+}
+
+@media (max-width: 640px) {
+  .acao { grid-template-columns: 22px 1fr; padding: 14px; }
+  .barra-int { justify-content: center; }
+}
+
+
+/* Estilos exclusivos da ediÃ§Ã£o da comunidade.
+   O build concatena este arquivo ao final de web/style.css, para que a paleta
+   e os componentes tenham uma fonte Ãºnica de verdade. */
+
+.marca-emblema { height: 58px; }
+
+.edicao {
+  font-size: .62em;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: var(--deep);
+  background: var(--accent);
+  border-radius: 4px;
+  padding: 3px 8px;
+  vertical-align: 5px;
+  margin-left: 8px;
+}
+
+.faixa {
+  background: linear-gradient(90deg, rgba(112,176,192,.14), rgba(77,194,71,.10));
+  border-bottom: 1px solid var(--line);
+}
+.faixa-int {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 15px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  font-size: .93rem;
+  line-height: 1.65;
+}
+.faixa b { color: var(--accent-f); }
+.faixa-emoji { font-size: 1.9rem; line-height: 1; flex-shrink: 0; }
+.faixa-emoji-fim { margin-left: 6px; white-space: nowrap; }
+
+.aviso-privacidade {
+  border-left-color: var(--ok);
+  background: rgba(77,194,71,.07);
+}
+.aviso-privacidade strong { color: var(--ok); }
+
+@media (max-width: 640px) {
+  .faixa-int { flex-direction: column; gap: 9px; }
+  .edicao { display: block; width: fit-content; margin: 6px 0 0; vertical-align: 0; }
+}
+

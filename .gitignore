@@ -1,0 +1,38 @@
+# ---------------------------------------------------------------------------
+# Dados da máquina de quem usa o programa.
+#
+# NADA aqui pode ir para o repositório: descreve dongles, licenças e a
+# configuração de um computador específico.
+# ---------------------------------------------------------------------------
+# A barra inicial ancora a regra na raiz do projeto. Sem ela, "baseline/"
+# casaria com QUALQUER pasta de mesmo nome em qualquer nível - inclusive
+# internal/baseline/, que é código-fonte e precisa ser versionado.
+/baseline/
+/backup/
+/logs/
+/estado.json
+*.c2v
+*.v2c
+*.wfw
+hasplm.ini
+
+# ---------------------------------------------------------------------------
+# Resultado de compilação
+# ---------------------------------------------------------------------------
+*.exe
+*.dll
+*.syso
+dist/
+
+# Nota: webcom/style.css e webcom/app.js SÃO versionados de propósito, mesmo
+# sendo gerados por scripts\build.ps1. A diretiva //go:embed exige que eles
+# existam em disco, então sem eles um "go build" logo após o clone falharia.
+
+# ---------------------------------------------------------------------------
+# Ambiente
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini

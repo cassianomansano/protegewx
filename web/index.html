@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProtegeWX — edição da comunidade</title>
+<link rel="icon" href="emblema.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-int">
+    <img src="emblema.svg" alt="ProtegeWX" class="marca marca-emblema">
+    <div class="topo-txt">
+      <h1>ProtegeWX <span class="edicao">edição da comunidade</span></h1>
+      <p>Isolamento de rede dos dongles Sentinel e dos programas PC SOFT</p>
+    </div>
+    <div class="topo-acao">
+      <button id="btn-recarregar" class="btn btn-fantasma" type="button">Reler estado</button>
+    </div>
+  </div>
+</header>
+
+<div class="faixa">
+  <div class="faixa-int">
+    <span class="faixa-emoji" aria-hidden="true">💪</span>
+    <div>
+      <b>Para a comunidade mais guerreira do mundo: programadores.</b>
+      Quem escreve o sistema que faz a empresa girar merece ter certeza de que a ferramenta
+      que comprou continua sendo dele. Aqui não tem mágica nem gambiarra — tem configuração
+      de rede feita à luz do dia, com o comando à mostra e o botão de desfazer do lado.
+      <span class="faixa-emoji-fim" aria-hidden="true">🛡️ ⚙️ 🚀</span>
+    </div>
+  </div>
+</div>
+
+<main class="pagina">
+
+  <section class="aviso">
+    <strong>Nada é executado sem a sua confirmação.</strong>
+    Cada item abaixo mostra o comando exato que será rodado, o risco envolvido e como desfazer.
+    Nenhuma ação escreve qualquer coisa dentro dos dongles — todas alteram somente configuração de rede e do
+    sistema operacional, e todas são reversíveis.
+  </section>
+
+  <section class="aviso aviso-privacidade">
+    <strong>Edição da comunidade.</strong>
+    Nesta versão os números de série dos seus dongles aparecem mascarados na tela
+    (<code>15••••••••</code>): só os dois primeiros dígitos, o bastante para você distinguir uma
+    chave da outra. A quantidade de pontos é fixa e não revela nem quantos dígitos o número tem.
+    Assim dá para tirar print do painel e pedir ajuda num fórum sem expor as suas chaves.
+    O arquivo de referência gravado em disco continua completo, porque é ele que serve de prova
+    do conteúdo original das suas licenças — esse não publique.
+  </section>
+
+  <section id="diagnostico" class="painel">
+    <h2>Estado atual da máquina</h2>
+    <div id="diag-corpo" class="carregando">lendo o sistema…</div>
+  </section>
+
+  <section id="licencas" class="painel">
+    <h2>Suas licenças</h2>
+    <div id="lic-corpo" class="carregando">consultando o gerenciador de licenças…</div>
+  </section>
+
+  <div id="grupos"></div>
+
+  <section class="painel">
+    <h2>Verificação contra o registro de referência</h2>
+    <p class="sutil">
+      Compara o conteúdo atual das chaves com o retrato guardado em <code>baseline/</code>.
+      Rode de tempos em tempos: se algum dia uma licença perpétua deixar de ser perpétua,
+      é aqui que isso aparece.
+    </p>
+    <button id="btn-check" class="btn" type="button">Conferir agora</button>
+    <div id="check-corpo"></div>
+  </section>
+
+</main>
+
+<div class="barra">
+  <div class="barra-int">
+    <span id="resumo-sel" class="sutil">nenhum item selecionado</span>
+    <div class="barra-btns">
+      <button id="btn-reverter-tudo" class="btn btn-perigo-fantasma" type="button">Reverter tudo</button>
+      <button id="btn-reverter" class="btn btn-fantasma" type="button" disabled>Reverter selecionados</button>
+      <button id="btn-aplicar" class="btn btn-primario" type="button" disabled>Aplicar selecionados</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal" class="modal oculto">
+  <div class="modal-caixa">
+    <h3 id="modal-titulo">Confirmar</h3>
+    <div id="modal-corpo"></div>
+    <div class="modal-btns">
+      <button id="modal-nao" class="btn btn-fantasma" type="button">Cancelar</button>
+      <button id="modal-sim" class="btn btn-primario" type="button">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<footer class="rodape">
+  Software livre para uso da comunidade · sem garantia · leia o que cada ação faz antes de aplicar<br>
+  O registro completo dos comandos executados fica em <code>logs\protegewx.log</code>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* Estilos exclusivos da edição da comunidade.
+   O build concatena este arquivo ao final de web/style.css, para que a paleta
+   e os componentes tenham uma fonte única de verdade. */
+
+.marca-emblema { height: 58px; }
+
+.edicao {
+  font-size: .62em;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: var(--deep);
+  background: var(--accent);
+  border-radius: 4px;
+  padding: 3px 8px;
+  vertical-align: 5px;
+  margin-left: 8px;
+}
+
+.faixa {
+  background: linear-gradient(90deg, rgba(112,176,192,.14), rgba(77,194,71,.10));
+  border-bottom: 1px solid var(--line);
+}
+.faixa-int {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 15px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  font-size: .93rem;
+  line-height: 1.65;
+}
+.faixa b { color: var(--accent-f); }
+.faixa-emoji { font-size: 1.9rem; line-height: 1; flex-shrink: 0; }
+.faixa-emoji-fim { margin-left: 6px; white-space: nowrap; }
+
+.aviso-privacidade {
+  border-left-color: var(--ok);
+  background: rgba(77,194,71,.07);
+}
+.aviso-privacidade strong { color: var(--ok); }
+
+@media (max-width: 640px) {
+  .faixa-int { flex-direction: column; gap: 9px; }
+  .edicao { display: block; width: fit-content; margin: 6px 0 0; vertical-align: 0; }
+}
