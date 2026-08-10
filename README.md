@@ -243,11 +243,9 @@ Mas se ele te salvou de uma dor de cabeça, ou se você só quer dizer *"valeu, 
 
 ### PIX
 
-**`c6@calunaty.com.br`**
+<img src="docs/pix-qrcode.png" width="230" alt="QR Code PIX">
 
-<!-- QR CODE: exporte a imagem no app do banco (Pix > Receber > QR Code),
-     salve como docs/pix-qrcode.png e troque este comentário por:
-     <img src="docs/pix-qrcode.png" width="220" alt="QR Code PIX"> -->
+**`c6@calunaty.com.br`**
 
 </div>
 
@@ -259,6 +257,10 @@ Mas se ele te salvou de uma dor de cabeça, ou se você só quer dizer *"valeu, 
 ```
 
 </details>
+
+<sub>O QR Code acima foi gerado por [`tools/qrpix`](tools/qrpix), um gerador escrito
+do zero sobre a biblioteca padrão do Go — Reed-Solomon, máscaras e tudo. Nenhum
+serviço externo viu essa chave.</sub>
 
 **E se não puder, tudo bem — de verdade.** Tem várias formas de ajudar que não
 custam nada e valem tanto quanto:
