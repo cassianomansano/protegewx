@@ -213,6 +213,29 @@ Ser honesto sobre isso importa mais do que parecer poderoso:
 
 ---
 
+## Ajude a espalhar
+
+<div align="center">
+
+<a href="docs/divulgacao/card-protegewx.png">
+  <img src="docs/divulgacao/card-protegewx.png" width="330" alt="Card do ProtegeWX">
+</a>
+
+</div>
+
+Tem material pronto em **[`docs/divulgacao`](docs/divulgacao)** — o card em
+[PNG](docs/divulgacao/card-protegewx.png), em
+[PDF](docs/divulgacao/card-protegewx.pdf) e o HTML de origem, caso queira adaptar
+ou traduzir.
+
+Manda no grupo, no fórum, pro colega que também tem dongle. Muita gente nem
+desconfia que o painel do Sentinel abre sem senha nenhuma.
+
+> No WhatsApp, envie o PNG **como documento**, não como foto — senão a compressão
+> embaça o texto miúdo.
+
+---
+
 ## Contribuindo
 
 Veja [CONTRIBUTING.md](CONTRIBUTING.md).
