@@ -227,7 +227,54 @@ plausíveis que simplesmente não existiam.
 
 ---
 
-<!-- CAFEZINHO -->
+<div align="center">
+
+## ☕ Me paga um cafezinho?
+
+</div>
+
+O ProtegeWX é e sempre vai ser **de graça**. Sem versão paga, sem recurso trancado,
+sem "pro". Não tem pegadinha.
+
+Mas se ele te salvou de uma dor de cabeça, ou se você só quer dizer *"valeu, cara"*
+— um cafezinho cai muito bem e ajuda a manter o projeto vivo. 😄
+
+<div align="center">
+
+### PIX
+
+**`c6@calunaty.com.br`**
+
+<!-- QR CODE: exporte a imagem no app do banco (Pix > Receber > QR Code),
+     salve como docs/pix-qrcode.png e troque este comentário por:
+     <img src="docs/pix-qrcode.png" width="220" alt="QR Code PIX"> -->
+
+</div>
+
+<details>
+<summary><b>Pix Copia e Cola</b> — clique para abrir</summary>
+
+```
+00020126400014br.gov.bcb.pix0118c6@calunaty.com.br5204000053039865802BR5909PROTEGEWX6008DOURADOS62070503***6304D11E
+```
+
+</details>
+
+<!-- PAYPAL: quando tiver o link paypal.me, cole aqui uma linha assim:
+### PayPal (para quem está fora do Brasil)
+[paypal.me/seuusuario](https://paypal.me/seuusuario)
+-->
+
+**E se não puder, tudo bem — de verdade.** Tem várias formas de ajudar que não
+custam nada e valem tanto quanto:
+
+- ⭐ Dar uma **estrela** aqui no repositório
+- 🗣️ **Contar pra outro programador** que também tem dongle
+- 🐛 Abrir uma **issue** quando algo não funcionar na sua máquina
+- 🌐 Mandar um **domínio novo** pra bloquear (veja o [CONTRIBUTING](CONTRIBUTING.md))
+- 📝 Corrigir um texto que ficou confuso
+
+Software que a comunidade cuida é software que não morre. 💪
 
 ---
 
