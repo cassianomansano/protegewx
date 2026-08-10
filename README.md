@@ -260,11 +260,6 @@ Mas se ele te salvou de uma dor de cabeça, ou se você só quer dizer *"valeu, 
 
 </details>
 
-<!-- PAYPAL: quando tiver o link paypal.me, cole aqui uma linha assim:
-### PayPal (para quem está fora do Brasil)
-[paypal.me/seuusuario](https://paypal.me/seuusuario)
--->
-
 **E se não puder, tudo bem — de verdade.** Tem várias formas de ajudar que não
 custam nada e valem tanto quanto:
 
